@@ -15,26 +15,26 @@
 }
 ```
 
-### Regel
+### Regeln
 * Genau eine Leerzeile nach jeder Regel
 
-### Selektor
+### Selektoren
 * Ein Selektor je Zeile (Normalfall)
-* Verwandte Selektoren in einer Zeile, getrennt durch ein Komma `,` und genau ein Leerzeichen
+* Verwandte Selektoren in eine Zeile, getrennt durch ein Komma `,` und genau ein folgendes Leerzeichen
 * Genau ein Leerzeichen zwischen letztem Selektor und öffnender Klammer `{` (kein Zeilenumbruch)
-* Schließende Klammer `}` in eigener Zeile
+* Schließende Klammer `}` in eigene Zeile
 
-### Deklaration (Eigenschaft-Wert-Paar)
+### Deklarationen (Eigenschaft-Wert-Paare)
 * **Eine Zeile je Deklaration, eine Deklaration je Zeile**
-* Doppelpunkt `:` unmittelbar nach Eigenschaftsname  
+* Doppelpunkt `:` unmittelbar nach dem Eigenschaftsnamen
 * Genau ein Leerzeichen zwischen Doppelpunkt `:` und Wert
-* Einrückung zur Selektorflucht genau ein `TAB`
-* Genau ein Semikolon `;` beendet jede Zeile
+* Einrückung zur Selektorflucht um genau ein `TAB`
+* Genau ein Semikolon `;` am Ende Zeile
 * Verwandte Eigenschaften (z.B. `width`, `height` oder `top`, `left`, `bottom`, `right`) sind zu gruppieren und zueinander zu sortieren
 
 ### Sonderfälle
 
-Zum Zweck der schnelleren Erfassbarkeit dürfen bestimmte Angaben **durch Leerzeichen** ausgerichtet werden.
+Zum Zweck der **schnelleren Erfassbarkeit** dürfen bestimmte Angaben **durch Leerzeichen** ausgerichtet werden.
 
 ```css
 .foo {
@@ -63,12 +63,15 @@ Zum Zweck der schnelleren Erfassbarkeit dürfen bestimmte Angaben **durch Leerze
 
 * Rechtsausrichtung von Eigenschaftsnamen mit *vendor prefix*
 * Rechtsausrichtung der Werte verwandter Eigenschaften
-* Einzeilige, in sich ausgerichtete Notation ähnlicher Regelvarianten (**nur eine Deklaration zulässig**)
+* Einzeilige, in sich ausgerichtete Notation ähnlicher Regelvarianten
+	* **Nur genau eine Wertezuweisung zulässig** (1 Deklaration = 1 Zeile)
+	* Leerzeichen statt Zeilenumbruch nach öffnender Klammer `{`
+	* Leerzeichen statt Zeilenumbruch vor schließender Klammer `}`
 
 
 # Schachtelung ("Nesting")
 
-Die Nutzung eines CSS-Präprozessors (z.B. Sass) bringt die Möglichkeit, Selektoren zu schachteln.
+Die Nutzung eines CSS-Präprozessors (z.B. Sass) bringt die Möglichkeit mit sich, Regeln zu schachteln.
 
 ```css
 foo {
@@ -115,4 +118,4 @@ foo {
 	6. Elementbasierte Subselektoren (`qux`) 
 	7. ID-basierte Subselektoren (`#quux`) 
 	8. Sonstige Selektoren (`.norf & bra`)
-* Geschachtelte Regeln (Positionen 2. bis 8.) sind untereinander und zu ihrem Vorgänger jeweils durch eine Leerzeile abzusetzen (siehe [Sonderfälle](#sonderfaelle))
+* Geschachtelte Regeln (Positionen 2. bis 8.) sind untereinander und zu ihrem Vorgänger jeweils durch eine Leerzeile abzusetzen (siehe auch [Sonderfälle](#sonderf-lle))
