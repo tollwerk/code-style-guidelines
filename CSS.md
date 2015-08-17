@@ -15,6 +15,9 @@
 }
 ```
 
+### Allgemein
+* Alle Selektoren und Eigenschaften sind in Kleinbuchstaben zu schreiben (**keine camelCase-Selektoren**)
+
 ### Regeln
 * Genau eine Leerzeile nach jeder Regel
 
