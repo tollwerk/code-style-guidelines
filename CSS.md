@@ -16,7 +16,8 @@
 ```
 
 ### Allgemein
-* Alle Selektoren und Eigenschaften sind in Kleinbuchstaben zu schreiben (**keine camelCase-Selektoren**)
+* Alle Selektoren und Eigenschaften sind klein zu schreiben (**keine camelCase-Selektoren**)
+* In selektoren sind alphanumerische Zeichen (a-z sowie 0-9) sowie Bindestriche zulässig (**keine snake_case-Selektoren**)
 
 ### Regeln
 * Genau eine Leerzeile nach jeder Regel
@@ -26,6 +27,13 @@
 * Verwandte Selektoren in eine Zeile, getrennt durch ein Komma `,` und genau ein folgendes Leerzeichen
 * Genau ein Leerzeichen zwischen letztem Selektor und öffnender Klammer `{` (kein Zeilenumbruch)
 * Schließende Klammer `}` in eigene Zeile
+* Selektoren sollten stets **so unspezifisch wie möglich sein**
+    * Die Adressierung von Elementen sollte in dieser Prioritätenreihenfolge realisiert werden:
+        1. Elementnamen (z.B. `div`)
+        2. Klassennamen (z.B. `.blog`)
+        3. Elementattribute (z.B. `[type=text]`)
+        4. Pseudo-Selektoren & -Elemente (z.B. `:focus` oder `::before`)
+        5. IDs (z.B. `#article-list`)
 
 ### Deklarationen (Eigenschaft-Wert-Paare)
 * **Eine Zeile je Deklaration, eine Deklaration je Zeile**
@@ -112,6 +120,7 @@ foo {
 
 * **Schachtelung ist — wo immer möglich — zu vermeiden!**
 * **Schachtelung ID-basierter Selektoren ist nicht zulässig** (z.B. `#foo #bar { ... }`) 
+* **Schachtelung von mehr als 3 Selektorebenen ist schlechter Stil und nicht zulässig** (z.B. `#foo .bar > .norf & bra { ... }`; hier empfiehlt sich ggf. die Vergabe zusätzlicher CSS-Klassen als Ansatzpunkte) 
 * Die Angaben innerhalb einer Regel sind zu sortieren und gruppieren:
 	1. Deklarationen (Eigenschaft-Wert-Paare)
 	2. Pseudo-Klassen (z.B. `:hover`, `:focus`)
