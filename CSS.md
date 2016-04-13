@@ -17,7 +17,7 @@
 
 ### Allgemein
 * Alle Selektoren und Eigenschaften sind klein zu schreiben (**keine camelCase-Selektoren**)
-* In selektoren sind alphanumerische Zeichen (a-z sowie 0-9) sowie Bindestriche zulässig (**keine snake_case-Selektoren**)
+* In selektoren sind alphanumerische Zeichen (a-z und 0-9) sowie Bindestriche zulässig (**keine snake_case-Selektoren**)
 
 ### Regeln
 * Genau eine Leerzeile nach jeder Regel
